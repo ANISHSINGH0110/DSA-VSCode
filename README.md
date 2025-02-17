@@ -36,8 +36,8 @@ g++ filename.cpp -o filename
 
 # 📁 Folder Structure
 
-# DSA-VSCode/
-│── Arrays/
+# DSA-VSCode /
+│── Arrays /
 │── LinkedList/
 │── Stack/
 │── Queue/
@@ -72,9 +72,6 @@ Push to your branch: git push origin feature-branch
 
 Open a Pull Request.
 
-# 📜 License
-
-This project is open-source under the MIT License.
 
 # 🚀 Happy Coding!
 
