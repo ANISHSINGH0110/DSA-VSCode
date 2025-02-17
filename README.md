@@ -40,13 +40,21 @@ g++ filename.cpp -o filename
 │── Arrays /
 
 │── LinkedList/
+
 │── Stack/
+
 │── Queue/
+
 │── Trees/
+
 │── Graphs/
+
 │── Sorting/
+
 │── Searching/
+
 │── DynamicProgramming/
+
 │── README.md
 
 # 🛠 Features
