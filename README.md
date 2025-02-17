@@ -16,7 +16,7 @@ Git (optional, for version control)
 
 Clone the Repository
 
-git clone https://github.com/your-username/DSA-VSCode.git
+git clone https://github.com/ANISHSINGH0110/DSA-VSCode.git
 cd DSA-VSCode
 
 Open in VS Code
@@ -36,7 +36,7 @@ g++ filename.cpp -o filename
 
 # 📁 Folder Structure
 
-DSA-VSCode/
+# DSA-VSCode/
 │── Arrays/
 │── LinkedList/
 │── Stack/
