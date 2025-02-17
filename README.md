@@ -37,23 +37,23 @@ g++ filename.cpp -o filename
 # 📁 Folder Structure
 
 # DSA-VSCode /
-│── Arrays /
+│── Arrays 
 
-│── LinkedList/
+│── LinkedList
 
-│── Stack/
+│── Stack
 
-│── Queue/
+│── Queue
 
-│── Trees/
+│── Trees
 
-│── Graphs/
+│── Graphs
 
-│── Sorting/
+│── Sorting
 
-│── Searching/
+│── Searching
 
-│── DynamicProgramming/
+│── DynamicProgramming
 
 │── README.md
 
