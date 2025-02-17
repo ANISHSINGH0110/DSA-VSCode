@@ -1,8 +1,8 @@
-DSA Implementation in C++ (VS Code)
+# DSA Implementation in C++ (VS Code)
 
 This repository contains implementations of various Data Structures and Algorithms (DSA) in C++ using Visual Studio Code (VS Code). The goal is to provide clean, well-documented code for learning and practicing DSA concepts.
 
-📌 Prerequisites
+# 📌 Prerequisites
 
 Ensure you have the following installed:
 
@@ -12,7 +12,7 @@ VS Code (with C++ extensions)
 
 Git (optional, for version control)
 
-🚀 Setup Instructions
+# 🚀 Setup Instructions
 
 Clone the Repository
 
@@ -34,7 +34,7 @@ Run the program using:
 g++ filename.cpp -o filename
 ./filename
 
-📁 Folder Structure
+# 📁 Folder Structure
 
 DSA-VSCode/
 │── Arrays/
@@ -48,7 +48,7 @@ DSA-VSCode/
 │── DynamicProgramming/
 │── README.md
 
-🛠 Features
+# 🛠 Features
 
 Well-structured implementations
 
@@ -58,7 +58,7 @@ Various DSA problems with solutions
 
 Easy-to-run in VS Code
 
-🎯 Contribution
+# 🎯 Contribution
 
 Contributions are welcome! To contribute:
 
