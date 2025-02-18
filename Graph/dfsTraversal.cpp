@@ -35,6 +35,28 @@ class Graph{
             cout << "}" << endl;
         }
      }
+     void dfsHelper(int src,unordered_map<int,bool>&visited)
+     {
+        visited[src] = true;
+        cout << src << ",";
+        for(auto nbr:adjList[src])
+        {
+            int node = nbr.first;
+            if(!visited[node])
+              dfsHelper(node,visited);
+        }
+     }
+     void dfsTraversal(int n)
+     {
+       // int src = 0;
+        cout << "DFS Traversal:" << endl;
+        unordered_map<int,bool>visited;
+        for(int src = 0;src<n;src++)
+        {
+            if(!visited[src])
+              dfsHelper(src,visited);
+        }
+     }
 };
 
 int main()
@@ -49,5 +71,6 @@ int main()
     // g.addEdge(0,1,5,1);
     // g.addEdge(0,1,5,1);
     g.printAdjList(4);
+    g.dfsTraversal(4);
     return 0;
 }

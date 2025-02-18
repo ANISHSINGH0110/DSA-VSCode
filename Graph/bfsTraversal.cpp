@@ -1,5 +1,6 @@
 #include <iostream>
 #include <list>
+#include <queue>
 #include <unordered_map>
 using namespace std;
  
@@ -35,6 +36,31 @@ class Graph{
             cout << "}" << endl;
         }
      }
+     void bfsTraversal(int src)
+     {
+       queue<int>q;
+       unordered_map<int,bool>visited;
+       cout << "BFS Traversal: "<< endl;
+       q.push(src);
+       visited[src] = true;
+       while(!q.empty())
+       {
+          int frontNode = q.front();
+          cout << frontNode << ",";
+          q.pop();
+          for(auto neighbour : adjList[frontNode])
+          {
+             int node = neighbour.first;
+             int wt = neighbour.second;
+             if(!visited[node])
+             {
+                q.push(node);
+                visited[node] = true;
+             }
+          }
+       }
+       cout << endl;
+     }
 };
 
 int main()
@@ -49,5 +75,6 @@ int main()
     // g.addEdge(0,1,5,1);
     // g.addEdge(0,1,5,1);
     g.printAdjList(4);
+    g.bfsTraversal(0);
     return 0;
 }
