@@ -15,6 +15,17 @@ int kadaneAlgo(vector<int>&nums)
     }
     return ans;
 }
+void printSubArray(vector<int>&nums)
+{
+    int n = nums.size();
+    for (int i = 0; i < n; i++) {
+              
+            for (int j = i; j < n; j++) {
+                cout << nums[j] << " "; 
+            }
+            cout << endl;
+        }
+}
 int maxSubArray(vector<int>& nums) {
     // int maxSum = INT_MIN;
     // int n = nums.size();
@@ -41,6 +52,9 @@ int main()
         cin >> arr[i];
     }
     cout << "Maximum subarray sum is : " << maxSubArray(arr) << endl;
+
+    cout <<"Subarray are : " << endl;
+    printSubArray(arr);
 
     return 0;
 }
