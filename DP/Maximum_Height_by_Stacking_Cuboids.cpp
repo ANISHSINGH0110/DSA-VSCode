@@ -72,6 +72,7 @@ int main()
     cout << "Enter the number of cuboids : " << endl;
     cin >> n;
     vector<vector<int>>arr(n,vector<int>(3));
+    cout << "Enter the elements in cuboids : " << endl;//l,b,h
     for(int i=0;i<n;i++)
     {
         for(int j=0;j<3;j++)
