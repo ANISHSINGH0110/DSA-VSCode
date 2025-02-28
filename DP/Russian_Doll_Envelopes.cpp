@@ -51,6 +51,31 @@ bool isSafeToPlace(vector<int>&e1,vector<int>&e2)
        return dp[0][0];
 
     }
+    static bool comp(vector<int>&a,vector<int>&b)
+    {
+        if(a[0] == b[0])
+          return a[1] > b[1];
+        return a[0]<b[0];  
+    }
+    int solveOptimal(vector<vector<int>>&arr)
+    {
+        //sort wid in increasing order and height in dec order
+        sort(arr.begin(),arr.end(),comp);
+        if(arr.size() == 0)
+          return 0;
+        vector<int>ans;
+        ans.push_back(arr[0][1]);
+        for(int i=1;i<arr.size();i++)
+        {
+            if(arr[i][1] > ans.back())
+              ans.push_back(arr[i][1]);
+            else{
+              int index = lower_bound(ans.begin(),ans.end(),arr[i][1])-ans.begin();
+              ans[index] = arr[i][1];  
+            }
+        }  
+        return ans.size();
+    }
     int maxEnvelopes(vector<vector<int>>& envelopes) {
         sort(envelopes.begin(),envelopes.end());
         int curr =0;
@@ -60,7 +85,9 @@ bool isSafeToPlace(vector<int>&e1,vector<int>&e2)
         // vector<vector<int>>dp(envelopes.size()+1,vector<int>(envelopes.size()+1,-1));
         // return solveMem(envelopes,curr,prev,dp);
 
-        return solveTab(envelopes);
+        //return solveTab(envelopes);
+
+        return solveOptimal(envelopes);
     }
 int main()
 {
