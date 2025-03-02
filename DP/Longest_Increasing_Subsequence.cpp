@@ -74,19 +74,36 @@ int lengthOfLIS(vector<int>& nums) {
     //  vector<vector<int>>dp(nums.size()+2,vector<int>(nums.size()+1,-1));
      //return solveMem(nums,-1,0,dp);
 
-     return solveTab(nums);
+    // return solveTab(nums);
+
+       //DP + binarySearch TC = O(nlog(n))
+        vector<int>ans;
+        ans.push_back(nums[0]);
+        for(int i=1;i<nums.size();i++)
+        {
+            if(nums[i] > ans.back())
+              ans.push_back(nums[i]);
+            else{
+                //find just bda elemnt index 
+                auto it = lower_bound(ans.begin(),ans.end(),nums[i]);
+                int index = it-ans.begin();
+                ans[index] = nums[i];
+            }  
+        }
+        return ans.size();
 }
 int main()
 {
-    int n;
-    cout <<"Enter the value of n : " << endl;
-    cin >> n;
-    vector<int>nums(n);
-    cout << "Enter the elements of nums : " << endl;
-    for(int i=0;i<n;i++)
-    {
-        cin >> nums[i];
-    }
+    // int n;
+    // cout <<"Enter the value of n : " << endl;
+    // cin >> n;
+    // vector<int>nums(n);
+    // cout << "Enter the elements of nums : " << endl;
+    // for(int i=0;i<n;i++)
+    // {
+    //     cin >> nums[i];
+    // }
+    vector<int>nums = {10,9,2,5,3,7,101,18};
     cout << "Ans is " << lengthOfLIS(nums) << endl;
     //printAllIncreasingSubsequences(nums);
 
