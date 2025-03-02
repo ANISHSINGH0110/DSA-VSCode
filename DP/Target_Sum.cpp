@@ -1,4 +1,10 @@
-
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <limits.h>
+#include <map>
+#include <algorithm>
+using namespace std;
 int solve(vector<int>&nums,int target,int i)
 {
     if(i==nums.size())
