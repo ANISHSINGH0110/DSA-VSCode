@@ -57,6 +57,6 @@ int main()
 
     vector<int>nums = {1,5,233,7};
     cout << "true if Player 1 can win the game. If the scores of both players are equal, then player 1 is still the winner, and you should also return true : " << predictTheWinner(nums) << endl;
-    
+
     return 0;
 }
