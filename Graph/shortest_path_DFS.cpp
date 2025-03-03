@@ -80,7 +80,7 @@ int main()
     g.addEdge(0,4,3,1);
     g.addEdge(1,4,1,1);
     g.addEdge(1,2,7,1);
-    g.addEdge(4,3,6,1);
+    g.addEdge(4,3,6,1); 
     g.addEdge(3,2,2,1);
     g.ShortestPathDFS(0);
 
