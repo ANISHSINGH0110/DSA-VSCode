@@ -51,7 +51,7 @@ class Graph{
         cout << "Printing the Result : " << endl;
         for(int i=0;i<n;i++)
         {
-            cout << src <<" -> " << i << " = " << dist[i] << endl;;
+            cout << src <<" -> " << i << " = " << dist[i] << endl;
         }
         cout << endl;
     }
