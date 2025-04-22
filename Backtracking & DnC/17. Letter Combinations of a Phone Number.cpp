@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+const int mod = 1e9+7;
 void solve(string& digits,vector<string>&ans,unordered_map<char,string>&mp,string output,int i)
 {
     if(i >= digits.length())
@@ -39,7 +39,8 @@ int main()
     vector<string>ans = letterCombinations(digit);
     for(auto i : ans)
        cout << i << " " << endl;
-    cout << "all possible combination are : " << ans.size() << endl;
+    int cnt =  (ans.size()%mod);   
+    cout << "all possible combination are : " << cnt << endl;
     
     return 0;
 
